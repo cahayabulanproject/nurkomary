@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+/* navbar */
+.navbar {
+    padding: 20px 0;
+    background-color: black;
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-box .menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-box .menu li {
+    list-style: none;
+}
+
+.navbar-box .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-box .menu li a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/* navbar */
+
+/* logo */
+.logo {
+    background-image: url(/assets/images/slide/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    animation: change 15s infinite ease-in-out;
+    /* background-color: black; */
+}
+
+@keyframes change {
+
+    0%,
+    25% {
+        background-image: url(/assets/images/slide/1.jpg);
+    }
+
+    33%,
+    58% {
+        background-image: url(/assets/images/slide/2.png);
+    }
+
+    66%,
+    91% {
+        background-image: url(/assets/images/slide/3.jpg);
+    }
+
+    100% {
+        background-image: url(/assets/images/slide/4.jpg);
+    }
+}
+
+.logo-box {
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box img {
+    height: 150px;
+}
+
+/* logo */
+
+/* saya */
+.saya {
+    padding-block: 50px;
+}
+
+.saya .container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.saya-box .box {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 30px;
+}
+
+.saya-box .box img {
+    /* border-radius: 50%; */
+    /* width: 400px; */
+    height: 600px;
+    object-fit: cover;
+    margin-inline: auto;
+}
+
+.saya-box .box p {
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.saya-box .box p span{
+    font-weight: bold;
+    color : black;
+}
+
+
+.saya-box .box a {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.saya-box .box a:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.saya-box .box div {
+    text-align: center;
+}
+/* saya */
+
+/* race */
+.race {
+    background-color: white;
+    padding-block: 50px;
+}
+
+.container .race-box {
+    display: grid;
+    /* width: 200px; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+    row-gap: 50px;
+}
+
+.race .container h1 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+    /* border-radius: 20px; */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+.grid-box::before
+ {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), transparent 45%, rgba(255, 255, 255, 0.1));
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.grid-box img,
+.overlay {
+    grid-area: 1 / 1;
+}
+
+.grid-box img {
+    width: 330px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.overlay {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: white;
+    /* background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.7)); */
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    padding: 20px;
+}
+
+.overlay h2 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 8px 8px 16px black;
+}
+
+.tombol-grid {
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-self: center;
+    text-decoration: none;
+    transform: translateY(8px);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.tombol-grid:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.grid-box:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-4deg) translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.grid-box:hover::before {
+    opacity: 1;
+}
+
+.grid-box:hover img {
+    transform: scale(1.06) rotate(1deg);
+    filter: brightness(0.8) saturate(1.1);
+}
+
+.grid-box:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-box:hover .tombol-grid {
+    transform: translateY(0);
+}
+/* race */
+
+/* ego */
+.ego .container .ego-box h2 {
+    color: black;
+    text-align: center;
+    padding : 20px;
+}
+
+.ego .container .ego-box p {
+    text-align: justify;
+    margin-bottom : 40px;
+}
+/* ego */
+
+/* kontak */
+footer {
+    height : 150px;
+    background-color: rgb(223, 215, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer img {
+    height: 50px;
+}
+
+footer .social a {
+    color: black;
+}
+
+footer .social a:hover {
+    color: red;
+}
+
+/* kontak */
+
+/* bawah */
+.buttom {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.buttom span {
+    font-weight: bold;
+}
+/* bawah */
+
+
+@media (max-width: 992px) {
+    .saya-box .box {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+/* layar responsif Tablet*/
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-box .menu {
+        gap: 70px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-box .menu li a {
+        font-size: 14px;
+    }
+
+    .logo-box {
+        height: 420px;
+        padding: 20px;
+    }
+
+    .logo-box img {
+        height: 110px;
+        max-width: 100%;
+    }
+
+    .saya {
+        padding-block: 40px;
+    }
+
+    .saya .container h1,
+    .race .container h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .saya-box .box {
+        gap: 20px;
+    }
+
+    .saya-box .box img {
+        height: auto;
+        width: min(100%, 320px);
+    }
+
+    .saya-box .box p {
+        font-size: 15px;
+        text-align: left;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    .grid-box img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .overlay h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .tombol-grid {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        gap: 10px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+/* layar responsif Tablet*/
+
+/* layar responsif Hp*/
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+
+    .navbar-box .menu {
+        gap: 50px;
+    }
+
+    .logo-box {
+        height: 320px;
+    }
+
+    .logo-box img {
+        height: 90px;
+    }
+
+    .saya .container h1,
+    .race .container h1 {
+        font-size: 28px;
+    }
+
+    .saya-box .box p {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    .saya-box .box a {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .overlay h2 {
+        font-size: 40px;
+    }
+
+    footer {
+        gap: 10px;
+        padding: 24px 16px;
+    }
+
+    footer img {
+        height: 40px;
+    }
+
+    .buttom {
+        height: auto;
+        padding: 10px 16px;
+        text-align: center;
+    }
+
+    .buttom p {
+        font-size: 12px;
+    }
+}
+/* layar responsif Hp*/
