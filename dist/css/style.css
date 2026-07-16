@@ -73,7 +73,8 @@
         background-image: url("/3.jpg");
     }
 
-    75%,100% {
+    75%,
+    100% {
         background-image: url("/4.jpg");
     }
 }
@@ -125,9 +126,9 @@
     margin-bottom: 30px;
 }
 
-.saya-box .box p span{
+.saya-box .box p span {
     font-weight: bold;
-    color : black;
+    color: black;
 }
 
 
@@ -149,6 +150,7 @@
 .saya-box .box div {
     text-align: center;
 }
+
 /* saya */
 
 /* race */
@@ -186,8 +188,8 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     transform-style: preserve-3d;
 }
-.grid-box::before
- {
+
+.grid-box::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -273,24 +275,26 @@
 .grid-box:hover .tombol-grid {
     transform: translateY(0);
 }
+
 /* race */
 
 /* ego */
 .ego .container .ego-box h2 {
     color: black;
     text-align: center;
-    padding : 20px;
+    padding: 20px;
 }
 
 .ego .container .ego-box p {
     text-align: justify;
-    margin-bottom : 40px;
+    margin-bottom: 40px;
 }
+
 /* ego */
 
 /* kontak */
 footer {
-    height : 150px;
+    height: 150px;
     background-color: rgb(223, 215, 215);
     display: flex;
     justify-content: center;
@@ -334,6 +338,7 @@ footer .social a:hover {
 .buttom span {
     font-weight: bold;
 }
+
 /* bawah */
 
 
@@ -424,6 +429,7 @@ footer .social a:hover {
         font-size: 14px;
     }
 }
+
 /* layar responsif Tablet*/
 
 /* layar responsif Hp*/
@@ -484,4 +490,5 @@ footer .social a:hover {
         font-size: 12px;
     }
 }
+
 /* layar responsif Hp*/
