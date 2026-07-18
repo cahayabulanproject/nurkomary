@@ -6,6 +6,7 @@
     font-family: "Work Sans", sans-serif;
 }
 
+
 .container {
     width: 80%;
     margin-inline: auto;
@@ -168,6 +169,7 @@
     row-gap: 50px;
 }
 
+
 .race .container h1 {
     color: black;
     text-align: center;
@@ -228,7 +230,7 @@
 .overlay h2 {
     color: white;
     margin: 0 0 15px 0;
-    font-size: 40px;
+    font-size: clamp(20px, 5vw, 50px);
     font-weight: bold;
     text-shadow: 8px 8px 16px black;
 }
@@ -342,18 +344,8 @@ footer .social a:hover {
 /* bawah */
 
 
-@media (max-width: 992px) {
-    .saya-box .box {
-        grid-template-columns: 1fr;
-    }
 
-    .container {
-        width: 90%;
-    }
-}
-
-/* layar responsif Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 1242px) {
     .navbar {
         padding: 15px 0;
     }
@@ -389,6 +381,7 @@ footer .social a:hover {
     }
 
     .saya-box .box {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -402,6 +395,11 @@ footer .social a:hover {
         text-align: left;
         line-height: 1.7;
         text-align: justify;
+    }
+
+    .container .race-box {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 
     .grid-box img {
@@ -425,15 +423,23 @@ footer .social a:hover {
         text-align: center;
     }
 
+    .social {
+        display: flex;
+        gap: 10px;
+        align-items: center
+    }
+
     footer p {
         font-size: 14px;
     }
+
+    .buttom p {
+        font-size: 12px;
+    }
 }
 
-/* layar responsif Tablet*/
 
-/* layar responsif Hp*/
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .container {
         width: 80%;
     }
@@ -448,6 +454,10 @@ footer .social a:hover {
 
     .logo-box img {
         height: 90px;
+    }
+
+    .saya-box .box {
+        grid-template-columns: 1fr;
     }
 
     .saya .container h1,
@@ -468,22 +478,21 @@ footer .social a:hover {
     }
 
     .overlay h2 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
-    footer {
-        gap: 10px;
-        padding: 24px 16px;
+    .social {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .social p {
+        font-size: 15px;
     }
 
     footer img {
         height: 40px;
-    }
-
-    .buttom {
-        height: auto;
-        padding: 10px 16px;
-        text-align: center;
     }
 
     .buttom p {
@@ -491,4 +500,10 @@ footer .social a:hover {
     }
 }
 
-/* layar responsif Hp*/
+@media (max-width: 1364px){
+    .container .race-box {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+} 
